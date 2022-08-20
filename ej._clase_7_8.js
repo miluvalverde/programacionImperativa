@@ -38,9 +38,9 @@ const prompt = require("prompt-sync")({ sigint: true });
 // Por ejemplo, asumiendo que el año actual es 2019 y el usuario
 // ingresa 1999, el programa debe imprimir en la consola: “Tienes 20 años”.
 
-// let pregunta = parseInt(prompt("En que año naciste? "));
-// let fechaNacimiento = (numero) => 2022 - numero;
-// console.log("Tienes " + fechaNacimiento(pregunta) + " años")
+// let preguntaNacimiento = parseInt(prompt("En que año naciste? "));
+// let edad = (numero) => 2022 - numero;
+// console.log("Tienes " + edad(preguntaNacimiento) + " años")
 
 
 // ----------------------------- EJERCICIO -----------------------------
@@ -67,7 +67,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 // Escribí un programa que imprima los números pares del 0 al 100.
 
 // function numerosParesHasta100() {
-//     for (i = 1; i <= 100; i++) {
+//     for (let i = 1; i <= 100; i++) {
 //         if (i % 2 == 0) {
 //             console.log(i);
 //         }
@@ -99,8 +99,8 @@ const prompt = require("prompt-sync")({ sigint: true });
 //     let porciento = 0;
 //     if (numero > 500) {
 //         porciento = (18 * numero) / 100;
+//         console.log(porciento);
 //     }
-//     console.log(porciento);
 //     return porciento;
 // } 
 // calculoDel18Porciento();
