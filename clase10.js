@@ -89,3 +89,22 @@ function invertirArray(array) {
     return arrayInvertido;
 }
 // invertirArray(palabras2);
+
+
+
+
+// ============== EJERCICIO 3 - SUMA ARRAY () ==============
+
+// En este ejercicio, deberás crear una función sumaArray() que acepte un arreglo de
+// números (3 elementos) y devuelva la suma de todos ellos.
+
+let elementos = [2, 4, 6];
+
+function sumaArray(array) {
+    let suma;
+    suma = array[0] + array[1] + array[2];
+    console.log(suma);
+    return suma;
+}
+// sumaArray(elementos);
+
