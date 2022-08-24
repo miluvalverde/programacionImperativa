@@ -56,3 +56,36 @@ function compararAsiaEuro (array1, array2) {
 }
 // compararAsiaEuro(asiaScores, euroScores)
 
+
+
+
+// ============== EJERCICIO 2 - ARRAY INVERSO ==============
+
+// Creá la función imprimirInverso que tome un array como argumento y que
+// imprima en la consola cada elemento en orden inverso (no tenés que invertir el
+// array).
+
+let palabras = ["hola", "como", "estas", "?"];
+
+function imprimirInverso(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[Math.abs(i - (array.length - 1))]);
+    }
+}
+// imprimirInverso(palabras)
+
+// Creá la función inversor que tome un array como argumento y devuelva uno
+// nuevo invertido.
+
+let palabras2 = ["hello", "how", "are", "you", "?"];
+
+let arrayInvertido = [];
+
+function invertirArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        arrayInvertido.push(array[Math.abs(i - (array.length - 1))]);
+    }
+    console.log(arrayInvertido);
+    return arrayInvertido;
+}
+// invertirArray(palabras2);
