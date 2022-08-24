@@ -108,3 +108,20 @@ function sumaArray(array) {
 }
 // sumaArray(elementos);
 
+
+
+
+// ============== EJERCICIO 4 - SIMULACIÓN ARRAY JOIN () ==============
+
+// En este ejercicio deberás crear una función llamada join() que reciba un arreglo de
+// strings de 4 elementos y simule el comportamiento del método Array.join().
+
+let simulacion = ["h", "o", "l", "a"]
+
+function join(array) {
+    let arrayString = array.toString();
+    let arrayStringSinComas = arrayString.replace(/,/g, "");
+    console.log(arrayStringSinComas);
+    return(arrayStringSinComas);
+}
+// join(simulacion)
