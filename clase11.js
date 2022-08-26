@@ -114,5 +114,32 @@ function propiedadUnica(arr, str) {
     console.log(nuevoArray);
     return nuevoArray;
 }
-propiedadUnica(array, "edad")
+// propiedadUnica(array, "edad")
 
+
+
+// ============== EJERCICIO 3 - CALCULADORA DE NOTAS ==============
+
+// Nos gustaría calcular el promedio del alumno y si el mismo está aprobado, basado en una
+// nota de aprobación que le va a ser dada. Para este ejercicio, vamos a dejar que pienses
+// todos los métodos y propiedades que puedan hacer falta para que el programa funcione
+// correctamente de la manera solicitada.
+
+let alumno = {
+    nombre: "Milagros",
+    numeroLegajo: 123,
+    listaDeNotas: [10, 9, 8],
+    calculoAprobacion: function(notaAprobacion) {
+        let sumaNotas = 0;
+        for (let i = 0; i < this.listaDeNotas.length; i++) {
+            sumaNotas += this.listaDeNotas[i];
+        };
+        let promedio = sumaNotas / this.listaDeNotas.length;
+        if (promedio>= notaAprobacion) {
+            console.log(`Felicitaciones! Pasaste con un promedio de ${promedio}`);
+        } else {
+            console.log(`Lo siento! Tu promedio de aporbación (${promedio}) no alcanzó para aprobar`);
+        }
+    }
+}
+alumno.calculoAprobacion(6);
