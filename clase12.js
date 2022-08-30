@@ -70,3 +70,16 @@
 //     console.log(total)
 // }
 // sumaArray(arrayEjemplo)
+
+
+// EJERCICIO 4
+
+// let arrayEjemploDos = ["h", "o", "l", "a"]
+
+// function join(array) {
+//     let arrayString = array.toString();
+//     let arrayStringSinComas = arrayString.replace(/,/g, "");
+//     console.log(arrayStringSinComas);
+//     return(arrayStringSinComas);
+// }
+// join(arrayEjemploDos)
