@@ -55,3 +55,18 @@
 // }
 
 // digitalHouse(2, 3);
+
+
+
+// EJERCICIO 3
+
+// let arrayEjemplo = [2, 4, 2, 4]
+
+// function sumaArray(array) {
+//     let total = 0;
+//     for (let i =0; i < array.length; i++) {
+//         total += array[i];
+//     }
+//     console.log(total)
+// }
+// sumaArray(arrayEjemplo)
