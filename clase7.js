@@ -158,3 +158,33 @@ const prompt = require("prompt-sync")({ sigint: true });
 //     default: 
 //         console.log("La palabra ingresada es incorrecta");
 // }
+
+
+// EJERCICIO 7
+
+// const calificaciónUno = "Muy mala";
+// const calificaciónDos = "Mala";
+// const calificaciónTres = "Mediocre";
+// const calificaciónCuatro = "Buena";
+// const calificaciónCinco = "Muy buena";
+// const calificación = "Hola";
+
+// switch(calificación) {
+//     case "Muy mala":
+//         console.log("Calificaste la película como Muy mala. Lo lamentamos mucho.");
+//         break;
+//     case "Mala":
+//         console.log("Calificaste la película como Mala. Lo lamentamos mucho.");
+//         break;
+//     case "Mediocre":
+//         console.log("Calificaste la película como Mediocre. Lo lamentamos mucho.");
+//         break;
+//     case "Buena":
+//         console.log("Calificaste la película como Buena. Me alegro!");
+//         break;
+//     case "Muy buena":
+//         console.log("Calificaste la película como Muy buena. Me alegro!");
+//         break;
+//     default:
+//         console.log("Ingresaste un valor inválido");
+// }
