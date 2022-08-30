@@ -119,3 +119,18 @@ const prompt = require("prompt-sync")({ sigint: true });
 // }
 
 // numeroSecreto(preguntaNumero)
+
+
+// EJERCICIO 5
+
+// function abrirParacaidas(velocidad, altura) {
+//     if (velocidad < 1000 && altura >= 2000 && altura < 3000) {
+//         console.log("El paracaídas se ha abierto")
+//     } else {
+//         console.log("Debido a valores de velocidad y altura incorrectos el paracaídas no se abrirá");
+//     }
+// }
+
+// abrirParacaidas(500, 2200);
+
+
