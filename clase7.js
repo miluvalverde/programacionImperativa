@@ -100,8 +100,22 @@ const prompt = require("prompt-sync")({ sigint: true });
 //         precio +=5;
 //     }
 //     console.log(`El precio total del sandwich elegido es ${precio}`);
+//      return precio;
 // }
 // sandwiches(baseSandwich, panSandwich, preguntaQueso, preguntaTomate, preguntaLechuga, preguntaCebolla, preguntaMayonesa, preguntaMostaza);
 
 
 // EJERCICIO 4
+
+// let preguntaNumero = parseInt(prompt("Qué número crees que eligió la computadora? "))
+
+// function numeroSecreto(numero) {
+//     let numeroRandom = Math.floor(Math.random() * 10) + 1;
+//     if (numero === numeroRandom) {
+//         console.log("Felicitaciones, acertaste");
+//     } else {
+//         console.log(`Lo siento! ${numero} no es igual a ${numeroRandom}`);
+//     }
+// }
+
+// numeroSecreto(preguntaNumero)
