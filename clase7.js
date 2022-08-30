@@ -107,7 +107,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 
 // EJERCICIO 4
 
-// let preguntaNumero = parseInt(prompt("Qué número crees que eligió la computadora? "))
+// let preguntaNumero = parseInt(prompt("Qué número crees que eligió la computadora? "));
 
 // function numeroSecreto(numero) {
 //     let numeroRandom = Math.floor(Math.random() * 10) + 1;
@@ -125,7 +125,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 
 // function abrirParacaidas(velocidad, altura) {
 //     if (velocidad < 1000 && altura >= 2000 && altura < 3000) {
-//         console.log("El paracaídas se ha abierto")
+//         console.log("El paracaídas se ha abierto");
 //     } else {
 //         console.log("Debido a valores de velocidad y altura incorrectos el paracaídas no se abrirá");
 //     }
@@ -134,3 +134,24 @@ const prompt = require("prompt-sync")({ sigint: true });
 // abrirParacaidas(500, 2200);
 
 
+// EJERCICIO 6
+
+// const perro = "perro";
+// const pelota = "pelota";
+// const arbol = "árbol";
+// const genio = "genio";
+
+// switch(pelota) {
+//     case "perro":
+//         console.log("dog");
+//         break;
+//     case "pelota":
+//         console.log("ball");
+//         break;
+//     case "ábrol":
+//         console.log("tree");
+//         break;
+//     case "genio":
+//         console.log("genius");
+//         break;
+// }
