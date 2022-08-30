@@ -35,3 +35,23 @@
 // }
 
 // concurso.encontrarGanador(alicia, bob)
+
+
+
+// EJERCICIO 2
+
+// function digitalHouse(numeroUno, numeroDos) {
+//     for (let i = 1; i <= 100; i ++) {
+//         if ((i % numeroUno === 0) && (i % numeroDos === 0)) {
+//             console.log("Digital House");
+//         } else if (i % numeroUno === 0) {
+//             console.log("Digital");
+//         } else if (i % numeroDos === 0) {
+//             console.log("House")
+//         } else {
+//             console.log(i)
+//         }
+//     }
+// }
+
+// digitalHouse(2, 3);
