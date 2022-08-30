@@ -140,8 +140,9 @@ const prompt = require("prompt-sync")({ sigint: true });
 // const pelota = "pelota";
 // const arbol = "árbol";
 // const genio = "genio";
+// const hola = "hola";
 
-// switch(pelota) {
+// switch(hola) {
 //     case "perro":
 //         console.log("dog");
 //         break;
@@ -154,4 +155,6 @@ const prompt = require("prompt-sync")({ sigint: true });
 //     case "genio":
 //         console.log("genius");
 //         break;
+//     default: 
+//         console.log("La palabra ingresada es incorrecta");
 // }
