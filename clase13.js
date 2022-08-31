@@ -73,3 +73,58 @@ function nuevoArreglo (num) {
 }
 
 // nuevoArreglo(5);
+
+
+
+// EJERCICIO 5 - SIMILAR STRING.SPLIT()
+
+// Deberás crear una función llamada split que reciba un string y simule el comportamiento de la función original. 
+// Importante: no podés usar el String.split().
+
+function split (str) {
+    let nuevoArray = [];
+    for (let i = 0; i < str.length; i++) {
+        nuevoArray.push(str.charAt(i))
+    }
+    console.log(nuevoArray)
+};
+
+// split("hola")
+
+
+
+// EJERCICIO 6 - MANEJANDO DOS ARREGLOS
+
+// Deberás crear una función llamada arrayHandler que reciba dos arreglos de igual largo como 
+// parámetros y muestre en la consola “Soy {elemento de array 1} y yo soy {elemento de array 2}”. 
+
+let arregloUno = [1, 2, 3, 4];
+let arregloDos = ["h", "o", "l", "a"]; 
+
+function arrayHandler (arrayUno, arrayDos) {
+    for (let i = 0; i < arrayUno.length; i++) {
+        console.log(`Soy ${arrayUno[i]} y yo soy ${arrayDos[i]}`)
+    }
+};
+
+// arrayHandler(arregloUno, arregloDos)
+
+
+
+// EJERCICIO 7 - PALÍNDROMO
+
+// Deberás crear una función llamada palindromo que indique si una palabra es palíndroma o no. 
+// Debe retornar “true” en caso de que lo sea, y “false” en caso de que no. 
+
+function palindromo (str) {
+    let array = Array.from(str)
+    for (let i = 0; i < str.length; i++) {
+        if (array[i] != array[array.length - i - 1]) {
+            return false;
+        } else {
+            return true
+        }
+    }
+};
+
+// console.log(palindromo("anilina"))
