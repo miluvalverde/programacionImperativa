@@ -52,7 +52,24 @@ function sumatoria (num) {
     for (let i = 1; i <= num; i++) {
         suma += i;
     }
-    return suma
+    console.log(suma)
 };
 
-// console.log(sumatoria(3));
+// (sumatoria(3));
+
+
+
+// EJERCICIO 4 - NUEVO ARREGLO
+
+// Deberás crear una función llamada nuevoArreglo que reciba un número como parámetro 
+// y que devuelva un nuevo arreglo con tantos elementos como el número que le hayas pasado.
+
+function nuevoArreglo (num) {
+    let nuevoArreglo = [];
+    for (let i = 1; i <= num; i++) {
+        nuevoArreglo.push(i);
+    }
+    console.log(nuevoArreglo)
+}
+
+// nuevoArreglo(5);
