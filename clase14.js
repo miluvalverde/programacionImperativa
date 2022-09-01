@@ -214,9 +214,9 @@ generarID(arrayCuentas);
 // el array de cuentas y un id, en caso de encontrar retornar la
 // cuenta (él objeto literal completo), caso contrario retornar null
 
-function buscarPorId(array, idBuscar) {
+function buscarPorId(array, id) {
     for (let i = 0; i < array.length; i ++) {
-        if (array[i].id === idBuscar) {
+        if (array[i].id === id) {
             console.log(array[i]);
         } else {
             console.log(null);
@@ -234,7 +234,7 @@ function buscarPorId(array, idBuscar) {
 // deberá retornar un array que cuyas cuentas se encuentren 
 // por debajo del saldo enviado por parámetro
 
-function filtrarPorSaldos (array, num) {
+function filtrarPorSaldos (array, saldo) {
     let arraySaldo = [];
     for (let i = 0; i < array.length; i ++) {
         if (array[i].saldo < num) {
@@ -244,4 +244,25 @@ function filtrarPorSaldos (array, num) {
     return arraySaldo;
 }
 
-console.log(filtrarPorSaldos(arrayCuentas, 100000));
+// console.log(filtrarPorSaldos(arrayCuentas, 100000));
+
+
+
+// EJERICIO 6
+
+// Desarrollar una función llamada incrementarSaldo que reciba 
+// como parámetro el array de cuentas, un id y un saldo, 
+// deberá incrementar él saldo de la cuenta, en caso de encontrar, 
+// caso contrario retornar undefined 
+
+function incrementarSaldo (array, id, saldo) {
+    for (let i = 0; i < array.length; i ++) {
+        if (array[i].id === id) {
+            array[i].saldo += saldo;
+            console.log(array[i]);
+        } else {
+            console.log(undefined);
+        }
+    }
+}
+incrementarSaldo(arrayCuentas, 3, 1000);
