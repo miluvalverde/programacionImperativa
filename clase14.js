@@ -223,4 +223,25 @@ function buscarPorId(array, idBuscar) {
         }
     }
 };
-buscarPorId(arrayCuentas, 3);
+// buscarPorId(arrayCuentas, 3);
+
+
+
+// EJERICIO 5
+
+// Desarrollar una función llamada filtrarPorSaldos que reciba 
+// como parámetro el array de cuentas y un saldo (Number), 
+// deberá retornar un array que cuyas cuentas se encuentren 
+// por debajo del saldo enviado por parámetro
+
+function filtrarPorSaldos (array, num) {
+    let arraySaldo = [];
+    for (let i = 0; i < array.length; i ++) {
+        if (array[i].saldo < num) {
+            arraySaldo.push(array[i]);
+        }
+    }
+    return arraySaldo;
+}
+
+console.log(filtrarPorSaldos(arrayCuentas, 100000));
