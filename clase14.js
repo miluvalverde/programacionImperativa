@@ -204,9 +204,23 @@ function generarID(array) {
     }
     return array
 }
-console.log(generarID(arrayCuentas))
+generarID(arrayCuentas);
 
 
 
+// EJERICIO 4
 
+// Desarrollar una función llamada buscarPorId que reciba como parámetro 
+// el array de cuentas y un id, en caso de encontrar retornar la
+// cuenta (él objeto literal completo), caso contrario retornar null
 
+function buscarPorId(array, idBuscar) {
+    for (let i = 0; i < array.length; i ++) {
+        if (array[i].id === idBuscar) {
+            console.log(array[i]);
+        } else {
+            console.log(null);
+        }
+    }
+};
+buscarPorId(arrayCuentas, 3);
