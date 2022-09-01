@@ -192,3 +192,21 @@ for (let i = 0; i < arrayCuentas.length; i ++) {
 
 
 
+// EJERICIO 3
+
+// Desarrollar una función llamada generarID que reciba como parámetro el 
+// array de cuentas y agregue a cada elemento (objeto literal) 
+// una propiedad llamada id con un valor Numérico
+
+function generarID(array) {
+    for (let i = 0; i < array.length; i ++) {
+        array[i].id = i + 1;
+    }
+    return array
+}
+console.log(generarID(arrayCuentas))
+
+
+
+
+
