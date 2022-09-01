@@ -39,6 +39,7 @@ for (let i = 0; i < edades.length; i++) {
 
 
 // Obtener el menor.
+
 var minimoEdades = Math.min(...edades);
 // console.log(minimoEdades);
 
@@ -64,5 +65,130 @@ let promedio = suma / (edades.length);
 for (let i = 0; i < edades.length; i++) {
     edades[i] += 1;
 };
-console.log(edades);
+// console.log(edades);
+
+
+
+// EJERICIO 2
+
+const arrayCuentas =
+[
+    {
+        titular: "Arlene Barr",
+        estaHabilitada: false,
+        saldo: 3253.40,
+        edadTitular: 33,
+        tipoCuenta: "sueldo"
+    },
+    {
+        titular: "Roslyn Torres",
+        estaHabilitada: false,
+        saldo: 3229.45,
+        edadTitular: 27,
+        tipoCuenta: "sueldo"
+    },
+    {
+        titular: "Cleo Lopez",
+        estaHabilitada: true,
+        saldo: 1360.19,
+        edadTitular: 34,
+        tipoCuenta: "corriente"
+    },
+    {
+        titular: "Daniel Malone",
+        estaHabilitada: true,
+        saldo: 3627.12,
+        edadTitular: 30,
+        tipoCuenta: "sueldo"
+    },
+    {
+        titular: "Ethel Leon",
+        estaHabilitada: true,
+        saldo: 1616.52,
+        edadTitular: 34,
+        tipoCuenta: "sueldo"
+    },
+    {
+        titular: "Harding Mitchell",
+        estaHabilitada: true,
+        saldo: 1408.68,
+        edadTitular: 25,
+        tipoCuenta: "corriente"
+    }
+]
+
+// Obtener un nuevo array de cuentas cuyas edades sean menores a 30.
+
+let arrayCuentasUno = [];
+
+for (let i = 0; i < arrayCuentas.length; i ++) {
+    if (arrayCuentas[i].edadTitular > 30) {
+        arrayCuentasUno.push(arrayCuentas[i]);
+    }
+}
+
+// console.log(arrayCuentasUno);
+
+// Obtener un nuevo array de cuentas cuyas edades sean mayor o igual a 30.
+
+let arrayCuentasDos = [];
+
+for (let i = 0; i < arrayCuentas.length; i ++) {
+    if (arrayCuentas[i].edadTitular >= 30) {
+        arrayCuentasDos.push(arrayCuentas[i]);
+    }
+}
+
+// console.log(arrayCuentasDos);
+
+
+// Obtener un nuevo array de cuentas cuyas edades sean menores o igual a 30.
+
+let arrayCuentasTres = [];
+
+for (let i = 0; i < arrayCuentas.length; i ++) {
+    if (arrayCuentas[i].edadTitular <= 30) {
+        arrayCuentasTres.push(arrayCuentas[i]);
+    }
+}
+
+// console.log(arrayCuentasTres);
+
+// TODO
+// Obtener la cuenta con el titular de la misma más joven.
+
+
+
+// Obtener un array con las cuentas habilitadas.
+
+let arrayCuentasCinco = [];
+
+for (let i = 0; i < arrayCuentas.length; i ++) {
+    if (arrayCuentas[i].estaHabilitada === true) {
+        arrayCuentasCinco.push(arrayCuentas[i])
+    }
+}
+
+// console.log(arrayCuentasCinco);
+
+
+// Obtener un array con las cuentas deshabilitadas.
+
+let arrayCuentasSeis = [];
+
+for (let i = 0; i < arrayCuentas.length; i ++) {
+    if (arrayCuentas[i].estaHabilitada === false) {
+        arrayCuentasSeis.push(arrayCuentas[i])
+    }
+}
+
+// console.log(arrayCuentasSeis);
+
+// TODO
+// Obtener la cuenta con el menor saldo.
+
+// TODO
+// Obtener la cuenta con el mayor saldo.
+
+
 
