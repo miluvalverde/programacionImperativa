@@ -1,3 +1,5 @@
+// EJERICIO 1
+
 const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
 
 // Obtener en un nuevo array las edades menores a 18.
@@ -60,7 +62,7 @@ let promedio = suma / (edades.length);
 // Incrementar en 1 todas las edades.
 
 for (let i = 0; i < edades.length; i++) {
-    edades[i] + 1;
+    edades[i] += 1;
 };
-console.log(incrementar(edades));
+console.log(edades);
 
