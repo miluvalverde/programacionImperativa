@@ -308,3 +308,79 @@ function minimo (num) {
 };
 // minimo(30);
 
+
+
+
+
+
+
+// CLASE 10
+
+const peliculas = ["star wars", "totoro", "rocky", "pulp fiction", "la vida es bella"];
+
+function convertirMayusculas (array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] = array[i].toUpperCase();
+    }
+    console.log(array);
+}
+// convertirMayusculas(peliculas);
+
+const peliculas_animadas = ["toy story", "finding Nemo", "kung-fu panda", "wally", "fortnite"];
+
+const videojuego = []
+let juego = peliculas_animadas.pop();
+videojuego.push(juego);
+// console.log(videojuego);
+// console.log(peliculas_animadas);
+
+function unSoloArray (array1, array2) {
+    let array2Length = array2.length
+    for (let i = 0; i < array2Length; i++) {
+        array1.push(array2[i]);
+    }
+    return(array1)
+}
+// console.log(unSoloArray(peliculas, peliculas_animadas));
+
+const asiaScores = [8, 10, 6, 9, 10, 6, 6, 8, 4];
+const euroScores = [8, 10, 6, 8, 10, 6, 7, 9, 5];
+function compararCalificaciones (array1, array2) {
+    for (let i = 0; i < array1.length; i++) {
+        console.log(array1[i] === array2[i]);
+    }
+};
+// compararCalificaciones(asiaScores, euroScores);
+
+function imprimirInverso (array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[array.length - i - 1]);
+    }
+};
+// imprimirInverso(asiaScores);
+
+function inverso (array) {
+    let arrayInverso = [];
+    for (let i = 0; i < array.length; i++) {
+        arrayInverso.push(array[array.length - i - 1]);
+    }
+    return arrayInverso
+}
+// console.log(inverso(asiaScores));
+
+let ejemploSuma = [1, 4, 5]
+
+function sumaArray (array) {
+    let suma = 0;
+    for (let i = 0; i < array.length; i++) {
+        suma = suma + array[i];
+    }
+    return suma
+}
+// console.log(sumaArray(ejemploSuma));
+
+function arrayJoin (array) {
+    let arrayString = array.toString();
+    let arrayStringSinComas = arrayString.replace(/,/g, "");
+    return(arrayStringSinComas);
+} 
