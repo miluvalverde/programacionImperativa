@@ -265,3 +265,46 @@ function factorial (num) {
 };
 // console.log(factorial(4));
 
+
+
+
+
+
+
+// CLASE 9
+
+const nombres = ["Pedro", "Pablo", "Maria", "Juan", "Diana"];
+function iterarArreglo (array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i])
+    }
+};
+// iterarArreglo(nombres);
+
+function mayorA500 (num) {
+    let porcentaje = 0;
+    if (num > 500) {
+        porcentaje = (18 * num) / 100;
+        console.log(porcentaje);
+    }
+}
+
+let arrayElemento = ["hola", "como", "estas", "?"]
+function elemento (array) {
+    if (array.length >= 3) {
+        console.log(array[2]);
+    } else {
+        console.log(-1);
+    }
+};
+// elemento(arrayElemento);
+
+function minimo (num) {
+    if (num < 10) {
+        console.log(10 - num);
+    } else if (num < 100) {
+        console.log(100 - num);
+    }
+};
+// minimo(30);
+
