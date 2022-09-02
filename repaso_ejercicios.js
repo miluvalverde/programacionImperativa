@@ -209,25 +209,59 @@ let traductor = "perro";
 //         console.log("La palabra ingresada es incorrecta");
 // };
 
-switch (valoracion) {
-    case "Muy mala":
-        console.log("Calificaste la pregunta como Muy mala. Lo lamentamos mucho");
-        break;
-    case "Mala":
-        console.log("Calificaste la pregunta como Mala. Lo lamentamos mucho");
-        break;
-    case "Mediocre":
-        console.log("Calificaste la pregunta como Mediocre. Lo lamentamos mucho");
-        break;
-    case "Buena":
-        console.log("Calificaste la pregunta como Buena. Me alegro");
-        break;
-    case "Muy buena":
-        console.log("Calificaste la pregunta como Muy buena. Me alegro");
-        break;
-    default:
-        console.log("Ingresaste un valor inválido");
+// switch (valoracion) {
+//     case "Muy mala":
+//         console.log("Calificaste la pregunta como Muy mala. Lo lamentamos mucho");
+//         break;
+//     case "Mala":
+//         console.log("Calificaste la pregunta como Mala. Lo lamentamos mucho");
+//         break;
+//     case "Mediocre":
+//         console.log("Calificaste la pregunta como Mediocre. Lo lamentamos mucho");
+//         break;
+//     case "Buena":
+//         console.log("Calificaste la pregunta como Buena. Me alegro");
+//         break;
+//     case "Muy buena":
+//         console.log("Calificaste la pregunta como Muy buena. Me alegro");
+//         break;
+//     default:
+//         console.log("Ingresaste un valor inválido");
+// }
+
+
+
+
+
+
+
+// CLASE 8
+
+function numerosSiguientes (num) {
+    let numeros = [];
+    for (let i = 1; i <= 10; i++) {
+        numeros.push(num + i)
+    }
+    return numeros;
+};
+// console.log(numerosSiguientes(10));
+
+// for (let i = 5; i <= 20; i += 3) {
+//     console.log(i);
+// };
+
+let suma = 0;
+for (let i = 0; i < 100; i++) {
+    suma = suma + i;
 }
+// console.log(suma);
 
-
+function factorial (num) {
+    let numero = num;
+    for (let i = 1; i < num; i++) {
+        numero *= i;
+    }
+    return numero;
+};
+// console.log(factorial(4));
 
