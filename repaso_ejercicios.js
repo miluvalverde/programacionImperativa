@@ -47,3 +47,44 @@ function circunferencia (num) {
     return calculoCircunferencia;
 };
 // console.log(circunferencia(5));
+
+
+
+
+
+
+
+// CLASE 6
+
+function sumar (num1, num2) {
+    return num1 + num2;
+};
+function restar (num1, num2) {
+    return num1 - num2;
+};
+function multiplicar (num1, num2) {
+    return num1 * num2;
+};
+function dividir (num1, num2) {
+    return num1 / num2;
+}
+
+console.log("-------------- Testeo de Operaciones / Calculadora --------------");
+console.log(sumar(3, 4));
+console.log(restar(23, 78));
+console.log(multiplicar(2355, 347));
+console.log(dividir(125, 78));
+console.log(dividir(20, 0));
+
+function cuadradoDeUnNumero (num) {
+    return multiplicar(num, num);
+};
+function promedioDeTresNumeros (num) {
+    return dividir(sumar(sumar(num, num), num), num);
+};
+function calcularPorcentaje (num1, num2) {
+    return dividir(multiplicar(num2, num1), 100);
+};
+function GeneradorDePorcentaje (num1, num2) {
+    return dividir(multiplicar(num2, 100), num1);
+};
