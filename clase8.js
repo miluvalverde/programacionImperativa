@@ -29,11 +29,11 @@ const prompt = require("prompt-sync")({ sigint: true });
 // entre el 0 y el 100
 
 // function sumatoriaHastaCien() {
-//     let i = 0
+//     let suma = 0
 //     for (let i = 0; i <= 100; i++) {
-//         console.log(i);
+//         suma = suma + i
 //     }
-//     return i;
+//     return suma;
 // }
 // sumatoriaHastaCien()
 
