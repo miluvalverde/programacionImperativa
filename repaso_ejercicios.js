@@ -384,3 +384,103 @@ function arrayJoin (array) {
     let arrayStringSinComas = arrayString.replace(/,/g, "");
     return(arrayStringSinComas);
 } 
+
+
+
+
+
+
+
+// CLASE 11
+
+//la lista de clientes.
+let arrayCuentas = [
+    {
+        nroCuenta: 5486273622,
+        tipoDeCuenta: "Cuenta Corriente",
+        saldoEnPesos: 27771,
+        titularCuenta: "Abigael Natte",
+    },
+    {
+        nroCuenta: 1183971869,
+        tipoDeCuenta: "Caja de Ahorro",
+        saldoEnPesos: 8675,
+        titularCuenta: "Ramon Connell",
+    },
+    {
+        nroCuenta: 9582019689,
+        tipoDeCuenta: "Caja de Ahorro",
+        saldoEnPesos: 27363,
+        titularCuenta: "Jarret Lafuente",
+    },
+    {
+        nroCuenta: 1761924656,
+        tipoDeCuenta: "Cuenta Corriente",
+        saldoEnPesos: 32415,
+        titularCuenta: "Ansel Ardley",
+    },
+    {
+        nroCuenta: 7401971607,
+        tipoDeCuenta: "Cuenta Unica",
+        saldoEnPesos: 18789,
+        titularCuenta: "Jacki Shurmer",
+    },
+];
+
+let banco = {
+    clientes: arrayCuentas,
+    consultarCliente: function(str) {
+        for (i = 0; i < this.clientes; i++) {
+            if (this.clientes[i].titularCuenta === str) {
+                return this.clientes[i];
+            };
+        }
+    },
+    depósito: function(str, num) {
+        let cliente = this.consultarCliente(str);
+        cliente.saldoEnPesos += num;
+        console.log(`Depósito realizado, su nuevo saldo es: ${clienteADepositar.saldoEnPesos}`);
+        return cliente.saldoEnPesos
+    },
+    extraccion: function(str, num) {
+        let cliente = this.consultarCliente(str);
+        if (cliente.saldoEnPesos != 0) {
+            cliente.saldoEnPesos -= num;
+            console.log("Extracción realizada correctamente, su nuevo saldo es: XXXX");
+        } else {
+            console.log("Fondos insuficientes");
+        }
+    }
+};
+
+let array = [ { nombre: "ean", edad: 27 }, { nombre: "Eze", edad: 49} ]
+function propiedadUnica(array, str) {
+    let nuevoArray = [];
+    for (let i = 0; i < array.length; i++) {
+        nuevoArray.push(
+            {
+                [str]: array[i][str]
+            }
+        )
+    }
+    return nuevoArray
+}
+// console.log(propiedadUnica(array, "edad"));
+
+let alumno = {
+    nombre: "Milagros",
+    numLegajo: 234,
+    listaNotas: [9, 9, 10],
+    aprobacion: function(num) {
+        let suma = 0;
+        for (i = 0; i < this.listaNotas; i++) {
+            suma += this.listaNotas[i];
+        };
+        let promedio = suma / this.listaNotas.length;
+        if (promedio >= num) {
+            console.log("Felicitaciones! Has aprobado");
+        } else {
+            console.log("Lo siento! Tu promedio de notas no aprueba");
+        }
+    }
+}
