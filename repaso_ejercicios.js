@@ -484,3 +484,57 @@ let alumno = {
         }
     }
 }
+
+
+
+
+
+
+
+// CLASE 12
+
+const alicia = [10, 80, 75];
+const bob = [90, 20, 25];
+
+let concurso = {
+    etapas: [],
+    ganador: "",
+    encontrarGanador: function(a, b) {
+        let nombreA = "alicia";
+        let nombreB = "bob";
+        let puntosPrimerParticipante = 0;
+        let puntosSegundoParticipante = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] > b[i]) {
+                puntosPrimerParticipante += 1;
+                this.etapas.push(nombreA);
+            } else if (a[i] < b[i]) {
+                puntosSegundoParticipante += 1;
+                this.etapas.push(nombreB);
+            }
+        }
+        if (puntosPrimerParticipante > puntosSegundoParticipante) {
+            console.log(`El ganador es ${nombreA}`);
+            this.ganador = nombreA;
+        } else if (puntosPrimerParticipante < puntosSegundoParticipante) {
+            console.log(`El ganador es ${nombreB}`);
+            this.ganador = nombreB;
+        } else {
+            console.log("Nadie gana");
+        }
+    }
+}
+// concurso.encontrarGanador(alicia, bob);
+// console.log(concurso);
+
+function digitalHouse (num1, num2) {
+    for (let i = 1; i <= 100; i++) {
+        if (i % num1 === 0 && i % num2 === 0) {
+            console.log("Digital House");
+        } else if (i % num1 === 0) {
+            console.log("Digital");
+        } else if (i % num2 === 0) {
+            console.log("House");
+        }
+    }
+}
