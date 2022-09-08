@@ -24,7 +24,10 @@ function sumarMatriz(arr) {
     }
     return resultado;
 }
-console.log(sumarMatriz(matriz5x5));
+// console.log(sumarMatriz(matriz5x5));
+
+
+
 
 // Completa la función para que retorne una matriz
 // de 10x10
@@ -45,4 +48,29 @@ function generarMatriz10por10() {
     return res;
 }
 let matriz10por10 = generarMatriz10por10();
-console.table(matriz10por10);
+// console.table(matriz10por10);
+
+
+// Por último, vamos a generar dos funciones:
+// a) Una va a sumar los valores en la diagonal marcada en rojo.
+// b) La otra va a marcar los valores de la diagonal marcada en verde.
+// Ambas funciones deben devolver un resultado único.
+function sumarRojo(arr) {
+    let resultado = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let j = i;
+        resultado += arr[i][j];
+    }
+    return resultado;
+}
+// console.log(sumarRojo(matriz10por10));
+
+function sumarVerde(arr) {
+    let resultado = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let j = arr.length - i - 1;
+        resultado += arr[i][j];
+    }
+    return resultado;
+}
+// console.log(sumarVerde(matriz10por10));
