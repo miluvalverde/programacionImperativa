@@ -25,3 +25,24 @@ function sumarMatriz(arr) {
     return resultado;
 }
 console.log(sumarMatriz(matriz5x5));
+
+// Completa la función para que retorne una matriz
+// de 10x10
+
+function generarMatriz10por10() {
+    let res = [];
+    for (let i = 0; i <= 90; i += 10) {
+        let aux = [];
+        for (let j = 1; j <= 10; j++) {
+            if (i === 0) {
+                aux.push(j);
+            } else {
+                aux.push(i + j);
+            }
+        }
+        res.push(aux);
+    }
+    return res;
+}
+let matriz10por10 = generarMatriz10por10();
+console.table(matriz10por10);
