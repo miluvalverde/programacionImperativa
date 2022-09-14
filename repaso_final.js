@@ -123,16 +123,8 @@ let calcularPorcentaje = (numTotal, numPorcentaje) => dividir(multiplicar(numTot
 
 
 
+
 // =================== Controlando el flujo de nuestras aplicaciones ===================
-let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
-// crear otras para tener varias pruebas)
-// if(edad < 18) {
-//     console.log("No puede pasar al bar.")
-// } else if (edad < 21){
-//     console.log("Puede pasar al bar, pero no puede tomar alcohol.")
-// } else {
-//     console.log("Puede pasar al bar y tomar alcohol.")
-// }
 // Si la edad es negativa, que se muestre en la consola este mensaje: "Error, edad
 // inválida. Por favor ingrese un número válido."
 // Importante: no se deberá mostrar ningún otro mensaje.
@@ -140,6 +132,24 @@ let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
 // la mayoría de edad.
 // ● Si su edad es impar, decirle en cualquiera de los mensajes: "¿Sabías que tu
 // edad es impar?".
+let edad = 21 
+// if (edad < 0) {
+//     console.log("Error, edad inválida. Por favor ingrese un número válido.");
+// }
+// else if(edad < 18) {
+//     console.log("No puede pasar al bar.")
+// } else if (edad < 21) {
+//     console.log("Puede pasar al bar, pero no puede tomar alcohol.")
+// } else if (edad = 21) {
+//     console.log("Puede pasar al bar y tomar alcohol. Felicitaciones por llegar a la mayoría de edad!");
+// }
+// else {
+//     console.log("Puede pasar al bar y tomar alcohol.")
+// }
+// if (edad % 3 === 0) {
+//     console.log("¿Sabías que tu edad es impar?");
+// }
+
 
 
 // totalAPagar()
@@ -152,6 +162,24 @@ let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
 // ● Si es “autobús”, ha de ser $55.
 // ● Si los litros consumidos están entre 0 y 25, se ha de añadir $50 al total a pagar.
 // ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.
+function totalAPagar (vehiculo, litrosConsumidos) {
+    let precioPorLitro = 0;
+    if (vehiculo === "coche") {
+        precioPorLitro = 86;
+    } else if (vehiculo === "moto") {
+        precioPorLitro = 70;
+    } else if (vehiculo === "autobús") {
+        precioPorLitro = 55;
+    }
+    let total = 0;
+    if (litrosConsumidos > 0 && litrosConsumidos < 25) {
+        total = litrosConsumidos * precioPorLitro + 50;
+    } else if (litrosConsumidos > 25) {
+        total = litrosConsumidos * precioPorLitro + 25;
+    }
+    return total
+}
+// console.log(totalAPagar("coche", 10));
 
 
 // Local de sándwiches
@@ -190,6 +218,42 @@ let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
 // función deberá consultar primero qué tipo de sándwich base se seleccionó, luego el
 // tipo de pan, y por último deberá verificar qué adicionales se seleccionaron.
 // Finalmente, deberá retornar el valor numérico del total a pagar del cliente.
+function crearSandwich (base, pan, queso, tomate, lechuga, cebolla, mayonesa, mostaza) {
+    let precio = 0;
+    if (base === "pollo") {
+        precio = 150;
+    } else if (base === "carne") {
+        precio = 200;
+    } else if (base === "veggie") {
+        precio = 100;
+    }
+    if (pan === "blanco") {
+        precio += 50;
+    } else if (pan === "negro") {
+        precio = 60;
+    } else if (pan === "s/gluten") {
+        precio = 75;
+    }
+    if (queso === true) {
+        precio += 20;
+    }
+    if (tomate === true) {
+        precio += 15;
+    }
+    if (lechuga === true) {
+        precio += 10;
+    }
+    if (cebolla === true) {
+        precio += 15;
+    }
+    if (mayonesa === true) {
+        precio += 5;
+    }
+    if (mostaza === true) {
+        precio += 5;
+    }
+    return precio
+};
 
 
 // ¿Cuál es el número secreto?
@@ -198,6 +262,15 @@ let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
 // entre 1 y 10 —investigá qué hace la función Math.random()—. En caso de ser correcto,
 // retorna un mensaje felicitando al usuario y, en caso de que no acierte, retorna un
 // mensaje de aliento junto con el número ingresado y el secreto.
+let numeroRandom = Math.floor(Math.random() * 10) + 1;
+function numeroSecreto (num) {
+    if (numeroRandom === num) {
+        console.log("Felicitaciones!");
+    } else {
+        console.log(`Lo siento! El número era ${numeroRandom}`);
+    }
+}
+// numeroSecreto(4);
 
 
 // abrirParacaidas()
@@ -206,6 +279,12 @@ let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
 // siguiente:
 // ● La velocidad debe ser menor a 1000 km/h.
 // ● La altura debe ser mayor o igual a 2000 m y menor a 3000 m.
+function abrirParacaidas (velocidad, altura) {
+    if (velocidad < 1000 && altura >= 2000 && altura < 3000) {
+        console.log("El paracaídas puede abrirse");
+    }
+};
+// abrirParacaidas(500, 2500);
 
 
 // Traductor condicional
@@ -214,6 +293,27 @@ let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
 // inglés.
 // En caso de que la palabra sea distinta a la esperada, mostrarle un mensaje que le
 // informe que la palabra ingresada es incorrecta.
+let objeto = "perro";
+// switch (objeto) {
+//     case "perro":
+//         console.log("dog");
+//         break;
+//     case "casa":
+//         console.log("house");
+//         break;
+//     case "pelota":
+//         console.log("ball");
+//         break
+//     case "ábrol":
+//         console.log("tree");
+//         break
+//     case "genio":
+//         console.log("genius");
+//         break
+//     default:
+//         console.log("Lo siento, vuelve a escribir la palabra");
+// }
+
 
 
 // Valoración de películas
@@ -229,7 +329,26 @@ let edad = 20 //(el número es a modo de ejemplo, podés cambiarlo o
 // Por ejemplo: "Calificaste la película como Muy Mala. Lo lamentamos mucho.".
 // En caso de que ingresara un valor distinto, mostrarle el mensaje: "Ingresaste un valor
 // inválido".
-// Cuando el usuario haya valorado la película, agradecerle su visita.
+let valoracion = "Muy mala";
+// switch (valoracion) {
+//     case "Muy mala":
+//         console.log("Calificaste la película como Muy mala. Lo lamentamos mucho.");
+//         break;
+//     case "Mala":
+//         console.log("Calificaste la película como Mala. Lo lamentamos mucho.");
+//         break;
+//     case "Mediocre":
+//         console.log("Calificaste la película como Mediocre. Lo lamentamos mucho.");
+//         break;
+//     case "Buena":
+//         console.log("Calificaste la película como Buena. Lo lamentamos mucho. Me alegro");
+//         break;
+//     case "Muy buena":
+//         console.log("Calificaste la película como Muy buena. Lo lamentamos mucho. Me alegro");
+//         break;
+//     default:
+//         console.log("Ingresaste un valor inválido");
+// }
 
 
 
