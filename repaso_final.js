@@ -2,46 +2,68 @@
 
 // Crear una función que convierta pulgadas en centímetros.
 // Recibe por parámetro pulgadas y retorna su equivalente en centímetros.
+function pulgadasCentimetros (num) {
+    return num * 2.54
+};
+// console.log(pulgadasCentimetros(1));
 
 
 // 2. Crear una función que recibe un string y lo convierte en una URL.
 // Ej: “pepito” es devuelto como “http://www.pepito.com”
+function convertirURL (str) {
+    return `http://www.${str}.com`
+};
+// console.log(convertirURL("hola"));
 
 
 // 3. Crear una función que recibe un string y devuelve la misma frase pero con
 // admiración.
+let admiracion = str => `${str}!!!`;
+// console.log(admiracion("hola"));
 
 
 // 4. Crear una función que calcule la edad de los perros, considerando que 1 año
 // para nosotros son 7 de ellos.
+let calcularEdadPerro = num => num * 7;
+// console.log(calcularEdadPerro(5));
 
 
 // 5. Crear una función que calcule el valor de tu hora de trabajo, introduciendo tu
 // sueldo mensual como parámetro.
 // PD: considerá que tu mes de trabajo tiene 40 horas.
+let sueldoHoraTrabajo = num => num / 40;
+// console.log(sueldoHoraTrabajo(40000));
+
 
 
 // Crear la función calculadorIMC() que reciba la altura en metros y el peso en
 // kilogramos y calcule el IMC de una persona. Luego, ejecutar la función
 // probando diferentes valores.
+let calculadorIMC = (numAltura, numPeso) => numPeso / (numAltura * numAltura);
+// console.log(calculadorIMC(1.57, 58)); 
+
 
 
 // Crear una función que recibe un string en minúscula, 
 // lo convierta a mayúsculas y lo retorne.
 // Investigá qué hace el método de strings .toUpperCase()
+let convertirMayuscula = str => str.toUpperCase();
+// console.log(convertirMayuscula("Milagros"));
 
 
 // 8. Crear una función que recibe un parámetro y devuelve qué tipo 
 // de dato es ese parámetro.
 // Pista: te servirá revisar qué hace la palabra reservada typeof.
+let tipoParametro  = prm => typeof(prm);
+// console.log(tipoParametro("h"));
 
 
 // 9. Crear una función que le pasamos el radio de un círculo 
 // y nos devuelve la circunferencia.
 // Pista: Investigá si el objeto Math tiene entre sus 
 // propiedades el número Pi.
-
-
+let calculoCircunferencia = num => Math.PI * num * num;
+console.log(calculoCircunferencia(10));
 
 
 
