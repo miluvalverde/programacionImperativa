@@ -63,64 +63,52 @@ let tipoParametro  = prm => typeof(prm);
 // Pista: Investigá si el objeto Math tiene entre sus 
 // propiedades el número Pi.
 let calculoCircunferencia = num => Math.PI * num * num;
-console.log(calculoCircunferencia(10));
+// console.log(calculoCircunferencia(10));
+
+
+
 
 
 
 // =================== Hagamos una calculadora ===================
-// Crear un archivo calculadora.js que contendrá las distintas operaciones a
-// realizar de nuestra calculadora.
-
-
 // 2. Crear una función sumar, esta deberá recibir dos parámetros y retornar la
 // suma de los mismos.
+let sumar = (num1, num2) => num1 + num2;
+// console.log(sumar(3, 2));
 
 
 // 3. Crear una función restar, la cual deberá recibir dos parámetros y retornar la
 // resta del primero menos el segundo.
+let restar = (num1, num2) => num1 - num2;
+// console.log(restar(3, 2));
 
 
 // 4. Crear una función multiplicar, la misma deberá recibir dos parámetros y
 // retornar el resultado de su multiplicación.
+let multiplicar = (num1, num2) => num1 * num2;
+// console.log(multiplicar(5, 6));
 
 
 // 5. Crear una función dividir, la cual recibirá dos parámetros y retornar el resultado
 // de la división del primero sobre el segundo.
-
-// En el archivo calculadora.js —debajo de nuestras 4 funciones hechas con
-// anterioridad— creá un console.log en el cual vas a poner un string para indicar
-// que debajo de él comenzarás a probar las funciones, algo así como un
-// “separador de código”. Por ejemplo:
-// console.log(“-------------- Testeo de Operaciones / Calculadora --------------”)
-
-
-// 2. Ejecutar la función que permite sumar y la función que permite restar pasando
-// como argumentos dos números cualesquiera. Mostrar en consola los
-// resultados.
-
-
-// 3. Ejecutar la función que permite multiplicar pasando como argumentos dos
-// números cualesquiera. Mostrar en consola el resultado.
-
-
-// 4. Ejecutar la función que permite dividir pasando como argumentos dos
-// números cualesquiera. Mostrar en consola el resultado.
-
-
-// 5. Ejecutar la función que permite dividir pasando, ahora, como uno de los dos
-// argumentos, el número cero. Mostrar en consola el resultado.
+let dividir = (num1, num2) => num1 / num2;
+// console.log(dividir(5, 2));
 
 
 // Crear una función que se llame cuadradoDeUnNumero, la cual recibe un
 // número como parámetro y deberá retornar ese número elevado al cuadrado.
 // Importante: cuadradoDeUnNumero() deberá utilizar la función multiplicar() para
 // calcular el cuadrado del parámetro ingresado a cuadradoDeUnNumero()
+let cuadradoDeUnNumero = num1 => multiplicar(num1, num1);
+// console.log(cuadradoDeUnNumero(4));
 
 
 // 2. Crear la función promedioDeTresNumeros, la misma deberá calcular el promedio
 // de 3 números, que serán ingresados por parámetro.
 // Importante: promedioDeTresNumeros() deberá utilizar algunas funciones
 // previamente creadas de nuestra calculadora.
+let promedioDeTresNumeros = (num1, num2, num3) => dividir(sumar(sumar(num1, num2), num3), 3);
+// console.log(promedioDeTresNumeros(3, 5, 5));
 
 
 // 3. Crear la función calcularPorcentaje. Esta recibirá dos parámetros: el número
@@ -128,6 +116,8 @@ console.log(calculoCircunferencia(10));
 // Ejemplo: calcularPorcentaje(300, 15) debe retornar 45, ya que es el 15% de 300.
 // Importante: calcularPorcentaje() deberá utilizar algunas funciones previamente
 // creadas de nuestra calculadora.
+let calcularPorcentaje = (numTotal, numPorcentaje) => dividir(multiplicar(numTotal, numPorcentaje), 100)
+// console.log(calcularPorcentaje(300, 15));
 
 
 
