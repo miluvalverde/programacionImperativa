@@ -772,7 +772,6 @@ let alumno = {
 // índice 2 (tercera etapa), a[2] < b[2], por lo que Alicia recibe otro punto. El ganador será
 // quien haya ganado más etapas. Si hay un empate final, el ganador debe dejarse vacío
 // esperando que se realice un nuevo concurso.
-
 // Dadas las consignas y cómo funciona el sistema de puntos, deberás calcular y encontrar
 // al ganador utilizando una estructura for que evite tener que calcular cada tanda por
 // separado. Recordá usar las estructuras if/else en caso de ser necesario para comparar
@@ -782,18 +781,38 @@ let alumno = {
 // propiedad ganador que guardará el ganador (en caso de que exista) como un string. Te
 // pedimos además que la función encontrarGanador sea un método del objeto literal
 // Concurso.
-// Para finalizar, se necesita enviar los resultados a otra aplicación, por lo que deberás crear
-// un JSON con la propiedad etapas para poder compartirlo. Creá un método
-// exportarResultados que haga esta conversión.
 
 const alicia = [10, 80, 75];
 const bob = [90, 20, 25];
 
-function encontrarGanador(a, b) {
-    let puntosPrimerParticipante = 0;
-    let puntosSegundoParticipante = 0;
-    //continua con esto.
-    }
+let concurso = {
+    etapas: [],
+    ganador: "",
+    encontrarGanador: function (arr1, arr2) {
+        let nombreArr1 = "Alicia";
+        let nombreArr2 = "Bob";
+        let puntosPrimerParticipante = 0;
+        let puntosSegundoParticipante = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] > arr2[i]) {
+                puntosPrimerParticipante += 1;
+                this.etapas.push(nombreArr1);
+            } else if (arr1[i] < arr2[i]) {
+                puntosSegundoParticipante += 1;
+                this.etapas.push(nombreArr2);
+            }
+        }
+        if (puntosPrimerParticipante > puntosSegundoParticipante) {
+            console.log(`Felicitaciones ${nombreArr1}!`);
+        } else if (puntosPrimerParticipante < puntosSegundoParticipante) {
+            console.log(`Felicitaciones ${nombreArr2}`);
+        } else {
+            console.log("Empataron");
+        }
+    } 
+};
+// concurso.encontrarGanador(alicia, bob);
+
 
 
 // digitalHouse()
@@ -806,18 +825,21 @@ function encontrarGanador(a, b) {
 // mostrar el string “House” en su lugar del número.
 // ● Si el número a imprimir es múltiplo de ambos parámetros, deberá mostrar el string
 // “Digital House” en lugar del número.
+let dos = 2;
+let cinco = 5;
+function digitalHouse (num1, num2) {
+    for (let i = 0; i <= 100; i++) {
+        if (i % num1 === 0 && i % num2 === 0) {
+            console.log("Digital House");
+        } else if (i % num1 === 0) {
+            console.log("Digital");
+        } else if (i % num2 === 0){
+            console.log("House");
+        }
+    }
+}
+// digitalHouse(dos, cinco)
 
-
-// sumArray()... Reloaded
-// Vamos a retomar el ejercicio sumArray() que hicimos en la clase de arrays, pero esta vez
-// lo modificaremos para que pueda recibir un array de números de cualquier cantidad de
-// elementos.
-// Si no recordás el enunciado original: deberás crear una función sumaArray que acepte
-// un arreglo de números y devuelva la suma de todos ellos.
-// Ejemplo:
-// ● sumArray([1,2,3]) // 6
-// ● sumArray([10, 3, 10, 4]) // 27
-// ● sumArray([-5,100]) // 95
 
 
 
