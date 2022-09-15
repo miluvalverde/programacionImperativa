@@ -653,12 +653,10 @@ let arrayCuentas = [
 // propiedad llamada “clientes” que estará compuesta de la lista de objetos
 // obtenidos en el punto anterior.
 
-
 // 3. Al objeto “banco”, crearle un método llamado consultarCliente, el cual recibirá un
 // nombre (titular) por parámetro, deberá buscarlo en la lista de cuentas y retornar el
 // objeto cliente que corresponda con ese nombre ingresado.
 // Ayuda: let clienteEncontrado = banco.consultarCliente(“Ramon Connell”);
-
 
 // 4. Crear otro método llamado depósito que recibirá dos parámetros: el titular de
 // cuenta y una cantidad de dinero a depositar. El método debe obtener la cuenta
@@ -666,14 +664,39 @@ let arrayCuentas = [
 // Luego, deberá dar un aviso por la consola con el mensaje “Depósito realizado, su
 // nuevo saldo es: XXXX”.
 
-
 // 5. Crear un último método llamado extracción que recibirá también dos parámetros:
 // el titular de cuenta y el monto a extraer. El método debe obtener la cuenta
 // correspondiente y restar el monto al saldo actual. En caso de que el resultado sea
 // menor a 0, deberá imprimir un mensaje por la consola de “Fondos insuficientes”.
 // De lo contrario, deberá imprimir “Extracción realizada correctamente, su nuevo
 // saldo es: XXXX”.
-
+let banco = {
+    clientes: arrayCuentas,
+    consultarCliente: function (nombre) {
+        for (let i = 0; i < this.clientes.length; i++) {
+            if (nombre === this.clientes[i].titularCuenta) {
+                return this.clientes[i];
+            }
+        }
+    },
+    deposito: function (nombre, dinero) {
+        this.consultarCliente(nombre).saldoEnPesos += dinero;
+        return this.consultarCliente(nombre)
+    },
+    extraccion: function (nombre, dinero) {
+        if (this.consultarCliente(nombre).saldoEnPesos - dinero < 0) {
+            console.log("Fondos insuficientes");
+        } else {
+            this.consultarCliente(nombre).saldoEnPesos -= dinero;
+            console.log(`Extracción realizada correctamente, su nuevo saldo es: ${this.consultarCliente(nombre).saldoEnPesos}`);
+        }
+        
+    }
+}
+// console.log(banco);
+// banco.consultarCliente("Jacki Shurmer");
+// console.log(banco.deposito("Jacki Shurmer", 1000));
+// banco.extraccion("Jacki Shurmer", 1000);
 
 // Propiedad única
 // Crear una función llamada propiedadUnica que reciba un arreglo de objetos como
@@ -683,7 +706,19 @@ let arrayCuentas = [
 // let array = [ { nombre: “Lean”, edad: 27 }, { nombre: “Eze”, edad: 49} ]
 // propiedadUnica(array, “edad”) debe retornar [ { edad: 27 }, { edad: 49 } ]
 // propiedadUnica(array, “nombre”) debe retornar [ { nombre: “Lean”}, { nombre: “Eze” } ]
+let arrayObjeto = [ { nombre: "Lean", edad: 27 }, { nombre: "Eze", edad: 49} ]
 
+function propiedadUnica (arr, str) {
+    let nuevoArregloObjeto = [];
+    for (let i = 0; i < arr.length; i++) {
+        nuevoArregloObjeto.push( {
+            [str]: arr[i][str]
+        } 
+        )
+    };
+    return nuevoArregloObjeto;
+}
+// console.log(propiedadUnica(arrayObjeto, "edad"))
 
 // Calculador de notas
 // Crear el objeto “alumno”, el cual va a consistir de las siguientes propiedades básicas:
@@ -694,6 +729,26 @@ let arrayCuentas = [
 // nota de aprobación que le va a ser dada. Para este ejercicio, vamos a dejar que pienses
 // todos los métodos y propiedades que puedan hacer falta para que el programa funcione
 // correctamente de la manera solicitada.
+let alumno = {
+    nombre: "Milagros",
+    numLegajo: 1234,
+    listaNotas: [10, 10, 11],
+    aprobado: function (notaAprobacion) {
+        let suma = 0;
+        for (let i = 0; i < this.listaNotas.length; i++) {
+            suma += this.listaNotas[i];
+        }
+        let promedio = 0;
+        promedio = suma / this.listaNotas.length;
+        if (promedio >= notaAprobacion) {
+            console.log("Felicitaciones! Aprobaste.");
+        } else {
+            console.log("Lo siento! Tu promedio no alcanzó para aprobar");
+        }
+    }
+};
+// alumno.aprobado(7);
+
 
 
 
