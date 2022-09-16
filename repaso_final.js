@@ -1152,41 +1152,49 @@ let num3 = 14;
 // Crea un algoritmo que te permita identificar
 // el numero mayor. Utiliza condicionales como el
 // if, else, o else if.
+function numeroMayor (num1, num2, num3) {
+    if (num1 > num2) {
+        if(num1 > num3) {
+            console.log(num1);
+        }
+    } else if (num2 > num3) {
+        console.log(num2);
+    } else {
+        console.log(num3);
+    }
+}
+// numeroMayor(num1, num2, num3);
 
-// Escribe tu código debajo de estas lineas,
-// y observa los resultados por la consola.
-// especificamente para este conjunto de datos
-// deberias ver por consola el numero 78,
-// adicional, cambia los valores de num1, num2 y num3
-// para verificar que tu algoritmo funcione con
-// cualquiera 3 valores.
 
 // Ahora bien. dado los siguientes numeros:
-
-
 let num11 = 13;
 let num22 = 1663;
 let num33 = 3363;
+let num44 = 3000;
 // agrega una variable mas, llamada num4
 // con un valor numerico
 
-// Crea un algoritmo que te permita identificar
-// el numero mayor de los 4 anteriores.
-
-// Escribe tu código debajo de esta linea,
-// y observa los resultados por la consola.
-// Adicional, cambia los valores de los 4 numeros
-// para ver que algoritmo funciona con cualquier
-// conjunto de 4 numeros.
+function mayorDeCuatro (num1, num2, num3, num4) {
+    if (num1 > num2) {
+        if(num1 > num3) {
+            console.log(num1);
+        }
+    } else if (num2 > num3) {
+        console.log(num2);
+    } else if (num3 > num4) {
+        console.log(num3);
+    } else {
+        console.log(num4);
+    }
+    
+}
+// mayorDeCuatro(num11, num22, num33, num44);
 
 
 /**
  * Extra: que puedes hacer para identificar
  * el numero mayor de una lista de numeros,
  * como la siguiente? Utiliza Javascript.
- *
- * Tip: es valido buscar en google :)
- *
  * Adicional: al terminar tu algoritmo,
  * cambia los valores de la lista, bien sea
  * agregando o removiendo, y asegurate
@@ -1194,8 +1202,18 @@ let num33 = 3363;
  * de numeros
  */
 const numeros = [5, 12, 2, 40, 33, 2, 8];
+// console.log(Math.max(...numeros));
 
-
+let mayor = 0;
+function mayorArray (arreglo) {
+    for(i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] > mayor) {
+            mayor = arreglo[i];
+        }
+    }
+    return mayor;
+}
+console.log(mayorArray(numeros))
 
 
 
