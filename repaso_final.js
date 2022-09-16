@@ -955,15 +955,42 @@ function palindromo (str) {
 // =================== ¡Más prácticas! ===================
 // Ejercicios
 // A partir de el siguiente array de edades nos solicitan realizar lo siguiente:
-const edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
+let edades = [11, 12, 15, 18, 25, 22, 10, 33, 18, 5];
 // Obtener en un nuevo array las edades menores a 18.
-// Obtener en un nuevo array las edades mayor o igual a 18.
-// Obtener en un nuevo array las edades igual a 18.
-// Obtener el menor.
-// Obtener el mayor. 
-// Obtener el promedio de edades.
-// Incrementar en 1 todas las edades.
+let edadesMenores = [];
+// for (let i = 0; i < edades.length; i++) {
+//     if (edades[i] < 18) {
+//         edadesMenores.push(edades[i]);
+//     };
+// };
+// console.log(edadesMenores);
 
+
+// Obtener en un nuevo array las edades mayor o igual a 18.
+let edadesMayores = [];
+// for (let i = 0; i < edades.length; i++) {
+//     if (edades[i] >= 18) {
+//         edadesMayores.push(edades[i]);
+//     };
+// };
+// console.log(edadesMayores);
+
+
+// Obtener en un nuevo array las edades igual a 18.
+let edadesIgual = [];
+// for (let i = 0; i < edades.length; i++) {
+//     if (edades[i] = 18) {
+//         edadesIgual.push(edades[i]);
+//     };
+// };
+// console.log(edadesMayores);
+
+
+// Incrementar en 1 todas las edades.
+// for (let i = 0; i < edades.length; i++) {
+//     edades[i] += 1;
+// }
+// console.log(edades);
 
 const arrayCuentas1 =
 [
@@ -1011,30 +1038,105 @@ const arrayCuentas1 =
     }
 ]
 // Obtener un nuevo array de cuentas cuyas edades sean menores a 30.
+let nuevoCuentasUno = [];
+// for (let i = 0; i < arrayCuentas1.length; i++) {
+//     if (arrayCuentas1[i].edadTitular < 30) {
+//         nuevoCuentasUno.push(arrayCuentas1[i])
+//     }
+// }
+// console.log(nuevoCuentasUno);
+
 // Obtener un nuevo array de cuentas cuyas edades sean mayor o igual a 30.
+let nuevoCuentasDos = [];
+// for (let i = 0; i < arrayCuentas1.length; i++) {
+//     if (arrayCuentas1[i].edadTitular >= 30) {
+//         nuevoCuentasDos.push(arrayCuentas1[i])
+//     }
+// }
+// console.log(nuevoCuentasDos);
+
 // Obtener un nuevo array de cuentas cuyas edades sean menores o igual a 30.
+let nuevoCuentasTres = [];
+// for (let i = 0; i < arrayCuentas1.length; i++) {
+//     if (arrayCuentas1[i].edadTitular <= 30) {
+//         nuevoCuentasTres.push(arrayCuentas1[i])
+//     }
+// }
+// console.log(nuevoCuentasTres);
+
 // Obtener la cuenta con el titular de la misma más joven.
+let edadAhora;
+let edadDespues;
+let edadJoven;
+// for (let i = 0; i < (arrayCuentas1.length - 1); i++) {
+//     edadAhora = arrayCuentas1[i].edadTitular;
+//     edadDespues = arrayCuentas1[i + 1].edadTitular;
+//     if (edadDespues < edadAhora) {
+//         edadJoven = arrayCuentas1[i + 1].edadTitular
+//     } else {
+//         edadJoven = arrayCuentas1[i].edadTitular
+//     }
+// };
+// console.log(edadJoven);
+
 // Obtener un array con las cuentas habilitadas.
+let nuevoCuentasCuatro = [];
+// for (let i = 0; i < arrayCuentas1.length; i++) {
+//     if (arrayCuentas1[i].estaHabilitada === true) {
+//         nuevoCuentasCuatro.push(arrayCuentas1[i]);
+//     }
+// }
+// console.log(nuevoCuentasCuatro);
+
 // Obtener un array con las cuentas deshabilitadas.
-// Obtener la cuenta con el menor saldo.
-// Obtener la cuenta con el mayor saldo.
+let nuevoCuentasCinco = [];
+// for (let i = 0; i < arrayCuentas1.length; i++) {
+//     if (arrayCuentas1[i].estaHabilitada === false) {
+//         nuevoCuentasCinco.push(arrayCuentas1[i]);
+//     }
+// }
+// console.log(nuevoCuentasCinco);
 
 
 // Desarrollar una función llamada generarID que reciba como parámetro 
 // el array de cuentas y agregue a cada elemento (objeto literal) una propiedad llamada id con un valor Numérico
-
+function generarID (array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].id = i + 1
+    }
+    return array;
+};
+generarID(arrayCuentas1);
 
 // Desarrollar una función llamada buscarPorId que reciba 
-// como parámetro el array de cuentas y un id, en caso de encontrar retornar la cuenta (él objeto literal completo), caso contrario retornar null
-
+// como parámetro el array de cuentas y un id, en caso de encontrar 
+// retornar la cuenta (él objeto literal completo), caso contrario retornar null
+function buscarPorId (array, id) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].id === id) {
+            return array[i];
+        } else {
+            return null;
+        }
+    }
+}
+// console.log(buscarPorId(arrayCuentas1, 2));
 
 // Desarrollar una función llamada filtrarPorSaldos que 
-// reciba como parámetro el array de cuentas y un saldo (Number), deberá retornar un array que se cuyas cuentas se encuentren por debajo del saldo enviado por parámetro
+// reciba como parámetro el array de cuentas y un saldo (Number), 
+// deberá retornar un array que se cuyas cuentas se encuentren por debajo del saldo 
+// enviado por parámetro
+function filtrarPorSaldos (array, num) {
+    let nuevoArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].saldo < num) {
+            nuevoArray.push(array[i]);
+        }
+    };
+    return nuevoArray
+}
+// console.log(filtrarPorSaldos(arrayCuentas1, 3000));
 
-
-// Desarrollar una función llamada incrementarSaldo que 
-// reciba como parámetro el array de cuentas, un id y un saldo, deberá incrementar él saldo de la cuenta, en caso de encontrar, caso contrario retornar undefined 
-// Reutilizando la función  buscarPorId 
 
 
 
