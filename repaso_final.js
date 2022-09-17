@@ -1312,6 +1312,23 @@ de 5x5 llena de puros numeros enteros y positivos
 Luego, escribe un algoritmo para sumar todos
 los numeros en la matriz.
 */
+let matrizUno = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15],
+    [16, 17, 18, 19, 20],
+    [21, 22, 23, 24, 25]
+];
+function sumarMatriz (matrix) {
+    let suma = 0;
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            suma += matrix[i][j];
+        }
+    };
+    return suma
+}
+// console.log(sumarMatriz(matrizUno));
 
 
 // Crear una función que genere una matriz de 10x10. Cada fila debe tener solo 10
@@ -1327,6 +1344,24 @@ los numeros en la matriz.
 // 81 82 83 84 85 86 87 88 89 90
 // 91 92 93 94 95 96 97 98 99 100
 
+function generarMatriz10por10(){
+    let res = [];
+    for(let i = 0; i <= 100; i += 10){
+        let aux = [];
+        for(let j = 1; j <= 10; j++){
+            if(i === 0){
+                aux.push(j)
+            } else {
+                aux.push(i + j)
+            }
+        }
+        res.push(aux)
+    }
+    return res;
+}
+// console.table(generarMatriz10por10());
+let matriz10por10 = generarMatriz10por10();
+
 
 // Por último, vamos a generar dos funciones:
 // a) Una va a sumar los valores en la diagonal marcada en rojo.
@@ -1334,7 +1369,23 @@ los numeros en la matriz.
 // Ambas funciones deben devolver un resultado único.
 // Rojo: 505
 // Verde 505
+function sumarRojo (matrix) {
+    let suma = 0;
+    for(let i = 0; i < 10; i++) {
+        suma += matrix[i][i];
+    }
+    return suma
+}
+// console.log('Rojo: ' + sumarRojo(matriz10por10));
 
+function sumarVerde(matrix){
+    let suma2 = 0;
+    for(let i = 9; i >= 0 ; i--) {
+        suma2 += matrix[i][i]
+    }
+    return suma2;
+}
+// console.log('Verde: ' + sumarVerde(matriz10por10));
 
 
 
