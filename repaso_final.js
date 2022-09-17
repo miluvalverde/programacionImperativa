@@ -1544,6 +1544,19 @@ let numeros2 = [
 Suma los valores que sean mayores
 o iguales a 10, pero menor a 1000.
 */
+function sumarCiertosValores (matrix) {
+    let suma = 0;
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (matrix[i][j] >= 10 && matrix[i][j] < 1000) {
+                suma += matrix[i][j];
+            }
+        }
+    }
+    return suma
+};
+// console.log(sumarCiertosValores(numeros2));
+
 
 
 
