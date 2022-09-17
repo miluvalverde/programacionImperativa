@@ -1393,15 +1393,60 @@ function sumarVerde(matrix){
 // =================== Ejercicios ===================
 // A partir de él siguiente array de edades nos solicitan realizar lo siguiente
 const edadesVarias = [33, 27, 34, 30, 34, 25];
-// Desarrollar una función que ordene internamente de forma ascendente las edades, la misma deberá retornar él array ordenado , es decir deberíamos obtener resultado como él siguiente.
+// Desarrollar una función que ordene internamente de forma ascendente las edades, 
+// la misma deberá retornar él array ordenado , es decir deberíamos obtener resultado 
+// como él siguiente.
 // [25, 27, 30, 33, 34, 34]
-// Desarrollar una función que ordene internamente de forma descendente las edades, la misma deberá retornar él array ordenado , es decir deberíamos obtener resultado como él siguiente.
+function ordenarAsc (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temporal = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temporal;
+            }
+        }
+    }
+    return arr
+}
+// console.log(ordenarAsc(edadesVarias));
+
+
+// Desarrollar una función que ordene internamente de forma descendente las edades, 
+// la misma deberá retornar él array ordenado , es decir deberíamos obtener resultado
+// como él siguiente.
 // [34, 34, 33, 30, 27, 25]
+function ordenarDesc (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j] < arr[j + 1]) {
+                let temporal = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temporal;
+            }
+        }
+    }
+    return arr
+}
+// console.log(ordenarDesc(edadesVarias));
 
 
 // Dado un array de strings:
-// const letras = [“C”, “A”, “D”, “E”, “H”, “Z”, “J”, “L”]
+const letrasDesordenadas = ["C", "A", "D", "E", "H", "Z", "J", "L"]
 // ¿Cómo pudieras ordenar el array anterior, alfabéticamente?
+function ordenarAlfabeticamente (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temporal = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temporal;
+            }
+        }
+    }
+    return arr
+}
+// console.log(ordenarAlfabeticamente(letrasDesordenadas));
 
 
 // A partir del siguiente array de Objetos Literales se solicita realizar lo siguiente:
@@ -1451,9 +1496,38 @@ const arrayCuentas2 =
         }
     ]
 // Desarrollar una función que ordene internamente de forma 
-// ascendente según él saldo de cada cuenta, la misma deberá retornar él array ordenado .
+// ascendente según él saldo de cada cuenta, la misma deberá retornar él array ordenado.
+function ordenarAscSaldo (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j].saldo > arr[j + 1].saldo) {
+                let temporal = arr[j].saldo;
+                arr[j].saldo = arr[j + 1].saldo;
+                arr[j + 1].saldo = temporal;
+            }
+        }
+    }
+    return arr
+}
+// console.log(ordenarAscSaldo(arrayCuentas2));
+
+
 // Desarrollar una función que ordene internamente de forma 
 // ascendente según la edad del titular de cada cuenta, la misma deberá retornar él array ordenado.
+function ordenarAscEdad (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j].edadTitular > arr[j + 1].edadTitular) {
+                let temporal = arr[j].edadTitular;
+                arr[j].edadTitular = arr[j + 1].edadTitular;
+                arr[j + 1].edadTitular = temporal;
+            }
+        }
+    }
+    return arr
+}
+// console.log(ordenarAscEdad(arrayCuentas2));
+
 
 
 
