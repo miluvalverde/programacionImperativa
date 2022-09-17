@@ -1212,8 +1212,8 @@ function mayorArray (arreglo) {
         }
     }
     return mayor;
-}
-console.log(mayorArray(numeros))
+};
+// console.log(mayorArray(numeros));
 
 
 
@@ -1224,28 +1224,82 @@ console.log(mayorArray(numeros))
 // por la palabra “fizzbuzz”. Visiten este sandbox
 // el ejercicio ahí. Recuerden desplegar la consola para ver sus resultados, y
 // utilicen la función console.log para mostrar datos en la misma.
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log("Fizzbuzz");
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz");
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz");
+//     }
+// };
 
 
 // 2) Escriban una función que reciba dos parámetros: un array y un índice. La
 // función deberá de mostrar por consola el valor del elemento según el
 // índice dado. Por ejemplo, dada la siguiente array e índice, la función
-// imprimirá '6'. let array =
-// [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]; var index = 1;
-// Visiten este sandbox para escribir su código.
+// imprimirá '6'. 
+let arrayNumeros = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]; 
+var index = 1;
+function devolver (arr, index) {
+    for (let i = 0; i < arr.length; i++) {
+        if (i === index) {
+            return arr[i]
+        }
+    }
+};
+// console.log(devolver(arrayNumeros, index));
 
 
 // 3) Escribir una función que, dado un número de mes, devuelva la cantidad
 // de días de ese mes —suponiendo que no es un año bisiesto—.
+function diasDelMes (num) {
+    switch (num) {
+        case 1:
+        case 3:
+        case 5:
+        case 7: 
+        case 8:
+        case 10:
+        case 12:
+            console.log("Este mes posee 31 días");
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            console.log("Este mes posee 30 días");
+            break;
+        default: 
+            console.log("Este mes posee 28 días");
+    }
+};
+// diasDelMes(2);
 
 
 // Escribir una función de JavaScript que invierta un número. Por ejemplo,
 // si x = 32443, la salida debería ser 34423.
+let numInvertir = 32443;
+function invertirNumero (num) {
+    let convertirRevertir =  num.toString().split("").reverse().join("");
+    return convertirRevertir;
+}
+// console.log(invertirNumero(numInvertir));
 
 
 // 5) Escribir una función que reciba una array y solo imprima los valores que
 // se repiten. Por ejemplo, dada la siguiente array e índice, la función
-// imprimirá '6,23,33,100'. let array =
-// [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
+// imprimirá '6,23,33,100'. 
+let array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
+function valoresRepetidos (arr) {
+    let arrayArreglado = arr.sort((a,b) => a - b);
+    for (let i = 0; i < arrayArreglado.length; i++) {
+        if (arr[i] === arr[i + 1] && arr[i] != numeros[i]) {
+            console.log(arr[i]);
+        }
+    }
+};
+// valoresRepetidos(array);
 
 
 
