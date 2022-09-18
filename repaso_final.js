@@ -1568,18 +1568,34 @@ function sumarCiertosValores (matrix) {
 // La idea es solo registrar el total de los gastos, al finalizar la jornada.
 // Para simplificar, vamos a considerar que todos los meses tienen cuatro semanas.
 // Los gastos estarán en una matriz de 4x7, cada fila representa una 
-// semana y cada columna un día. Es decir fila 0, semana 1, fila 1, semana 2, etc. Columna 0, dia 1, columna 1, dia 2, etcétera. 
+// semana y cada columna un día. Es decir fila 0, semana 1, fila 1, semana 2, etc. 
+// Columna 0, dia 1, columna 1, dia 2, etcétera. 
+
+
 // a)  Lo que nos solicitan es dar el total de gastos en una semana. 
-// Recordemos que cada fila representa una semana, es decir, si nos indican semana 2 tenemos que sumar la fila 1 de la matriz. Recordar que las matrices comienzan siempre en posición 0. 
+// Recordemos que cada fila representa una semana, es decir, si nos indican semana 
+// 2 tenemos que sumar la fila 1 de la matriz. Recordar que las matrices comienzan 
+// siempre en posición 0. 
+
+
+
 // b) La aplicación también tendrá una parte de estadísticas, 
 // para esto nos solicitan dar el total de un día en particular, 
 // por ejemplo del día 3, acá también tengamos en cuenta lo que ocurre con las filas, 
 // ya que las columnas también comienzan en 0.
+
+
+
 // c) Por último, es necesario tener el total de gastos realizados en el mes.
 // Pregunta para pensar, ¿es lo mismo recorrer por filas o por columnas para 
 // resolver este último punto?
+
+
+
 // d) Obtener cuál fue la semana que más gastos se realizaron. 
 // Indicar el día que más gastos se realizaron.
+
+
 
 
 
@@ -1592,6 +1608,21 @@ function sumarCiertosValores (matrix) {
 // los valores para poder indicar cuál fue la mayor cantidad de likes obtenidos, cuánto
 // obtuvo el segundo, cuánto el tercero y cuánto el que menos likes obtuvo —suponer
 // que participaron 15 usuarios y suponer para cada uno, una cantidad de likes—.
+let likes = [123, 651, 9888, 457, 190, 7634, 76, 39, 10, 539, 9834, 10456, 56, 238, 17];
+
+function ordenarLikes (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j] < arr[j + 1]) {
+                let temporal = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temporal;
+            }
+        }
+    }
+    return `Primer lugar: ${arr[0]}. Segundo lugar: ${arr[1]}. Tercer lugar: ${arr[2]}. Último lugar: ${arr[arr.length -1]}`
+}
+// console.log(ordenarLikes(likes));
 
 
 // Ejercicio 2
@@ -1601,6 +1632,66 @@ function sumarCiertosValores (matrix) {
 // día. Las temperaturas —objeto temperatura— están cargados en un array.
 // a) Ordenar por temperatura mínima de menor a mayor.
 // b) Ordenar por temperatura máxima de mayor a menor.
+let meteorologico = [
+    {
+        dia: 1,
+        mes: 3,
+        temMax: 20,
+        temMin: 10
+    },
+    {
+        dia: 2,
+        mes: 3,
+        temMax: 15,
+        temMin: 8
+    },
+    {
+        dia: 3,
+        mes: 3,
+        temMax: 25,
+        temMin: 15
+    },
+    {
+        dia: 4,
+        mes: 3,
+        temMax: 10,
+        temMin: 5
+    },
+    {
+        dia: 5,
+        mes: 3,
+        temMax: 22,
+        temMin: 14
+    }
+];
+function ordenarAsc (arr) {
+    for(let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+            if (arr[j].temMin > arr[j + 1].temMin) {
+                let temporal = arr[j].temMin;
+                arr[j].temMin = arr[j + 1].temMin;
+                arr[j + 1].temMin = temporal;
+            }
+        }
+    }
+    return arr
+};
+console.log(ordenarAsc(meteorologico));
+
+function ordenarDesc (arr) {
+    for(let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < (arr.length - 1); j++) {
+                if (arr[j].edad < arr[j + 1].edad) {
+                let temporal = arr[j].edad;
+                arr[j].edad = arr[j + 1].edad;
+                arr[j + 1].edad = temporal;
+            }
+        }
+    }
+    return arr
+};
+console.log(ordenarDesc(meteorologico));
+
 
 
 
