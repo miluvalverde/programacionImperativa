@@ -1668,9 +1668,9 @@ function ordenarAsc (arr) {
     for(let i = 0; i < arr.length; i++) {
         for (let j = 0; j < (arr.length - 1); j++) {
             if (arr[j].temMin > arr[j + 1].temMin) {
-                let temporal = arr[j].temMin;
-                arr[j].temMin = arr[j + 1].temMin;
-                arr[j + 1].temMin = temporal;
+                let temporal = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temporal;
             }
         }
     }
@@ -1681,10 +1681,10 @@ console.log(ordenarAsc(meteorologico));
 function ordenarDesc (arr) {
     for(let i = 0; i < arr.length; i++) {
         for (let j = 0; j < (arr.length - 1); j++) {
-                if (arr[j].edad < arr[j + 1].edad) {
-                let temporal = arr[j].edad;
-                arr[j].edad = arr[j + 1].edad;
-                arr[j + 1].edad = temporal;
+                if (arr[j].temMax < arr[j + 1].temMax) {
+                let temporal = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temporal;
             }
         }
     }
