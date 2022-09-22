@@ -1698,24 +1698,8 @@ console.log(ordenarDesc(meteorologico));
 
 
 // =================== Clase 21 ===================
-// Crear una función que imprima todos los dígitos decimales, del 0 al 9,
-// usando un ciclo For.
-
-
-// 2. Crear una función que imprima los números entre el 5 y el 20, saltando de
-// tres en tres. 
-
-
-// 3. Crear una función que imprima la sumatoria de todos los números entre el
-// 0 y el 100.
-
-
 // 4. Crear una función que reciba un string y luego imprimir la cantidad de
 // vocales que se encuentran en dicha frase.
-
-
-// 5. Realizar una función que, dada una lista, devuelva una nueva lista cuyo
-// contenido sea igual a la original pero invertida.
 
 
 // 6. Realizar una función que escriba una pirámide del 1 al 30 de la siguiente
